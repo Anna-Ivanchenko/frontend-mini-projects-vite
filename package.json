@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "frontend-mini-projects-vite",
+    "build": "vite build --base=/frontend-mini-projects-vite/",
     "preview": "vite preview"
   },
   "devDependencies": {
