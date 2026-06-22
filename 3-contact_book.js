@@ -1,0 +1,7 @@
+import"./assets/styles-Dnwn-Ch8.js";let s=[];function r(e){return`<li data-id="${e.id}">
+  <h3>${e.name}</h3>
+  <p>${e.phone}</p>
+  <p>${e.email}</p>
+  <button class='js-btn-delete' type='button'>Delete</button>
+</li>`}function m(e){return e.map(r).join("")}const c="contact-info";function d(e,t){const n=JSON.stringify(t);localStorage.setItem(e,n)}function u(e,t){const n=localStorage.getItem(e);try{return JSON.parse(n)??t}catch{return n??t}}const o=document.querySelector(".js-contact-form");console.log(o);const l=document.querySelector(".js-contact-list");console.log(l);o.addEventListener("input",()=>{const e=new FormData(o),t={id:Date.now(),name:e.get("name"),phone:e.get("phone"),email:e.get("email")};console.log(t),d(c,t)});document.addEventListener("DOMContentLoaded",e=>{const t=u(c,{});o.elements.name.value=t.name||"",o.elements.phone.value=t.phone||"",o.elements.email.value=t.email||""});o.addEventListener("submit",e=>{e.preventDefault();const t=new FormData(o),n={id:Date.now(),name:t.get("name"),phone:t.get("phone"),email:t.get("email")};s.push(n),console.log(s);const a=r(n);l.insertAdjacentHTML("beforeend",a),console.log(m(s)),localStorage.removeItem(c),o.reset()});l.addEventListener("click",e=>{if(!e.target.classList.contains("js-btn-delete"))return;const t=e.target.closest("li"),n=t.dataset.id,a=s.findIndex(i=>i.id.toString()===n);a!==-1&&s.splice(a,1),t.remove(),console.log(s)});
+//# sourceMappingURL=3-contact_book.js.map
