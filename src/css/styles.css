@@ -12,7 +12,14 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
+@import url('./1-gallery.css');
+@import url('./2-form.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+@import url('./3-contact_book.css');
+@import url('./4-expense_tracker.css');
+@import url('./5-movie_search.css');
+@import url('./6-notes_app_pro.css');
+@import url('./7-feedback_form.css');
+@import url('./8-product_catalog.css');
+@import url('./9-library_tracker.css');
+@import url('./10-registration_form_validation.css');

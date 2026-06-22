@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to the Contact Book
+        </h1>
+        <a class="back-link" href="./index.html">Go back</a>
+      </div>
+      <div class="container">
+        <form class="js-contact-form contact-form" autocomplete="off">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="off" />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="off" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="off" />
+          </label>
+          <button type="submit">Add Contact</button>
+        </form>
+
+        <ul class="js-contact-list"></ul>
+      </div>
+    </main>
+    <script type="module" src="./js/3-contact_book/main.js"></script>
+  </body>
+</html>

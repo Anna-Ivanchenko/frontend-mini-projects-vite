@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,16 +7,84 @@
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav-logo" href="./index.html" aria-label="Site logo">
+            <svg class="nav-logo-icon" width="100" height="30">
+              <use href="{=$icon-path}"></use>
+            </svg>
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-curr}" href="./2-form.html"
+                >Form</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-act}" href="./3-contact_book.html"
+                >Contact Book 📒</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./4-expense_tracker.html"
+                >Expense Tracker 💸</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-act}" href="./5-Movie_search.html"
+                >Movie Search 🎬</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./6-notes_app_pro.html"
+                >Notes App PRO 📝</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./7-feedback_form.html"
+                >Feedback Form ⭐</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./8-product_catalog.html"
+                >Product Catalog 🛒</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./9-library_tracker.html"
+                >Library Tracker 📚</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {=$highlight-act}"
+                href="./10-registration_form_validation.html"
+                >Registration Form + Validation 🔐</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main></main>
 
     <script type="module" src="./main.js"></script>
   </body>
