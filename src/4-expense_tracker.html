@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to the Expense
+          Tracker
+        </h1>
+        <a class="back-link" href="./index.html">Go back</a>
+      </div>
+      <div class="container">
+        <form class="js-expense_tracker expense_tracker" autocomplete="off">
+          <input type="text" name="title" />
+          <input type="number" name="amount" />
+          <button type="submit">Add Expense</button>
+        </form>
+        <h2>
+          Total:
+          <span class="js-total">0</span>
+          грн
+        </h2>
+        <ul class="js-expense-list"></ul>
+        <label>
+          Max amount:
+          <input
+            type="number"
+            class="js-filter-amount"
+            placeholder="Enter amount"
+          />
+        </label>
+
+        <button type="button" class="js-filter-btn">Filter</button>
+        <button type="button" class="js-clear-all">Clear All</button>
+      </div>
+    </main>
+    <script
+      type="module"
+      src="./js/4-expense_tracker/main-4-expense_tracker.js"
+    ></script>
+  </body>
+</html>

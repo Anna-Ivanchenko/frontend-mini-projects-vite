@@ -6,9 +6,7 @@ import { saveContacts } from './storage';
 import { loadContacts } from './storage';
 
 const formElem = document.querySelector('.js-contact-form');
-console.log(formElem);
 const contListElem = document.querySelector('.js-contact-list');
-console.log(contListElem);
 
 formElem.addEventListener('input', () => {
   const formData = new FormData(formElem);
@@ -19,7 +17,6 @@ formElem.addEventListener('input', () => {
     phone: formData.get('phone'),
     email: formData.get('email'),
   };
-  console.log(obj);
 
   saveContacts(STORAGE_KEY, obj);
 });
@@ -44,12 +41,10 @@ formElem.addEventListener('submit', e => {
   };
 
   contacts.push(obj);
-  console.log(contacts);
 
   const markup = contactTemplate(obj);
 
   contListElem.insertAdjacentHTML('beforeend', markup);
-  console.log(contactsTemplate(contacts));
 
   localStorage.removeItem(STORAGE_KEY);
   formElem.reset();
