@@ -9,6 +9,7 @@ const formBooks = document.querySelector('.js-book-form');
 const booksList = document.querySelector('.js-book-list');
 const searchBooks = document.querySelector('.js-search-book');
 const filterStatus = document.querySelector('.js-filter-status');
+const btnDelete = document.querySelector('.js-clear-all-books');
 
 const savedBooks = loadBooks(STORAGE_KEY09, []);
 
@@ -111,3 +112,24 @@ function renderFilteredBooks() {
   }
   booksList.innerHTML = booksTemplate(filteredBooks);
 }
+
+btnDelete.addEventListener('click', () => {
+  if (books.length === 0) {
+    return;
+  }
+
+  books.length = 0;
+
+  saveBooks(STORAGE_KEY09, books);
+
+  booksList.innerHTML = '';
+
+  Swal.fire({
+    toast: true,
+    position: 'top-end',
+    icon: 'success',
+    title: 'Library cleared!',
+    showConfirmButton: false,
+    timer: 2000,
+  });
+});
