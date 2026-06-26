@@ -19,6 +19,8 @@
   "dependencies": {
     "lodash.throttle": "^4.1.1",
     "simplelightbox": "^2.14.3",
+    "sweetalert2": "^11.26.25",
+    "uuid": "^14.0.1",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
