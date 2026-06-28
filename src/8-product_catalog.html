@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to the Shopp
+        </h1>
+        <a class="back-link" href="./index.html">Go back</a>
+      </div>
+
+      <div class="container">
+        <form class="js-product-form product-form" autocomplete="off">
+          <label>
+            Product name
+            <input type="text" name="name" placeholder="Enter product name" />
+          </label>
+
+          <label>
+            Price
+            <input
+              type="number"
+              name="price"
+              placeholder="Enter price"
+              min="1"
+            />
+          </label>
+
+          <button type="submit">Add Product</button>
+        </form>
+
+        <h2 class="cart-title">Shopping Cart</h2>
+
+        <ul class="js-products-list products-list"></ul>
+
+        <h3 class="cart-total">
+          Total:
+          <span class="js-total-price">0</span>
+          грн
+        </h3>
+
+        <button class="js-clear-cart" type="button">Clear Cart</button>
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="./js/8-product_catalog/main-08product_catalg.js"
+    ></script>
+  </body>
+</html>
